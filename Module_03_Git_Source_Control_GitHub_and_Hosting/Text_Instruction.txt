@@ -1,0 +1,52 @@
+1) What is Git? What are the advantages of using Git?
+
+Answer: Git is a distributed version control system (VCS) that records changes to files and coordinates work among multiple people. Advantages include:
+- Distributed (every clone has full history, works offline)
+- Fast operations (commits, diffs, merges)
+- Cheap branching & merging for parallel development
+- Integrity (commits are cryptographically linked)
+- Staging area for fine-grained commits
+
+2) What do you understand by the term 'Version Control System'?
+
+Answer: A Version Control System (VCS) records and manages changes to files over time so you can review, revert, or branch from previous states. Benefits include history, collaboration, safe experimentation, and auditing.
+
+3) What’s the difference between Git and GitHub?
+
+Answer: Git is the tool (a distributed VCS) that manages commits and history. GitHub is a web-based hosting service for Git repositories that adds collaboration features like pull requests, issues, and CI/CD. Git can be used without GitHub; GitHub uses Git under the hood.
+
+4) Name a few Git commands with their function.
+
+Answer: Examples of commonly used Git commands:
+- git init — create a new repository
+- git clone <url> — copy a remote repository locally
+- git add <file> — stage changes for commit
+- git commit -m "msg" — record staged snapshot
+- git status — show working tree status
+- git log — view commit history
+- git branch — list/create branches
+- git switch <branch> / git checkout <branch> — switch branches
+- git merge <branch> — merge another branch into current
+- git fetch — download remote changes (no merge)
+- git pull — fetch + merge (or rebase)
+- git push — send commits to remote
+
+5) Difference between git fetch and git pull
+
+Answer: git fetch downloads remote refs and objects to your local repository but does not change your current branch or working files. git pull performs a fetch followed by a merge (or rebase) into your current branch, updating it immediately. Use git fetch to inspect changes before integrating them, and git pull when you want to update in one step.
+
+git fetch
+👉 Downloads updates from the remote repository but does not change your code.
+Your files stay exactly the same.
+You use it when you want to check what changed first.
+
+git pull
+👉 Downloads updates and applies them immediately to your current branch.
+Your files get updated right away.
+You use it when you’re ready to update your code in one step.
+
+Easy way to remember
+
+Fetch = look only 👀
+
+Pull = download + update 🔄

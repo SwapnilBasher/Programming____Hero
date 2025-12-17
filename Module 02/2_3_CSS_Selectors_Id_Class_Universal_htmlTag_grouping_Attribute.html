@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors(Basic)</title>
+    <style>
+        /* ID Selector */
+        #header-two {
+            color: blue;
+            text-align: center;
+        }
+
+        /* Class Selector */
+        .header-three {
+            color: green;
+            font-style: italic;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            font-size: 26px;  
+        }
+
+/* "div h4" is a descendant selector: it targets only h4 elements that are inside (descendants of) a div.
+Use it to scope the style so h4s elsewhere on the page are not affected. */
+/* HTML Tag Selector */
+        div h4 {
+            color: rgb(46, 176, 34);
+            font-size: 15px;   
+        }
+
+        /* Attribute Selector */
+        a[title] {
+            color: red;
+            text-decoration: none;
+        }
+        a[title]:hover {
+            color: rgb(8, 240, 58);
+            text-decoration: underline;
+        } 
+        
+        /* Grouping Selector */
+        ul, button, input {
+            text-align: center; 
+            background-color: lightgray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors(Basic)</h1>
+
+    <h2 id="header-two">This is an H2 with ID selector</h2>
+
+    <h3 class="header-three">This is an H3 with Class selector</h3>
+
+    <p>This is a paragraph using the universal selector.</p>
+
+    <div>
+        <h4>This is an H4 inside a div element.</h4>
+    </div>
+
+    <h4>This H4 is outside any div → NOT styled by div h4</h4>
+
+    <a href="#" title="This is a link with a title attribute.">Hover over this link to see the title attribute.</a>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <br>
+    <button>Click Me!</button>
+    <br>
+    <input type="text" placeholder="Enter text here">
+
+
+</body>
+</html>

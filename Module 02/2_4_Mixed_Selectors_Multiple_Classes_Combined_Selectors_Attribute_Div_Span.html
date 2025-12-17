@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Selectors</title>
+    <link rel="icon" href="Module 01\rice.png" type="image/png"> 
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           /* margin: 40px; */
+        }
+        h1 span {
+            color: orange;
+            font-weight: bold;
+        }
+        div p {
+            color: purple;
+            font-size: 28px;
+        }
+        .highlighted {
+            background-color: yellow;
+        }
+        .nicheDagger {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        #uniqueElement {
+            text-transform: uppercase;
+            text-decoration: wavy underline; 
+        }
+        #uniqueListItem {
+            font-size: 24px;
+            color: green;
+        }
+        ul, p[title="anDaJe"] {
+            text-align: center;
+        }
+        /*
+        */
+        a[title] {
+            color: rgb(19, 19, 19);
+            font-size: smaller;
+            text-decoration: none;
+        }
+        a[title]:hover{
+            color: rgb(71, 12, 232);
+            font-size: larger;
+            text-decoration:  underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is header <span>one.</span></h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsum molestias et cumque excepturi, quaerat esse aliquam harum vero voluptas illo at in, voluptatibus voluptate. Culpa totam ratione tempore vel?</p>
+    </div>
+    <p class="highlighted nicheDagger">This paragraph has multiple classes applied to it.</p>
+    <p id="uniqueElement">This paragraph has a unique ID applied to it.</p>
+    <ul>
+        <li class="highlighted">List item one with highlighted class.</li>
+        <li class="nicheDagger">List item two with nicheDagger class.</li>
+        <li id="uniqueListItem">List item three with unique ID.</li>
+    </ul>
+    <p title="anDaJe">Unordered list  and this paragraph have same text align centre.</p>
+
+     <a title="youtube e niye jae!" href="youtube.com" target="_blank">You Tube</a>
+
+</body>
+</html>

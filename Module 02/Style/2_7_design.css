@@ -1,0 +1,27 @@
+h1 {
+    color: blue;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px #000000;
+    border: 10px solid red; 
+    box-shadow: 10px 10px 5px grey; /* box-shadow: offset-x offset-y blur-radius color — 10px right, 10px down, 5px blur */
+}
+.tea {
+    visibility: hidden;
+}
+.coffee {
+    display: none;
+}
+p span {
+    
+    border: 2px solid green;
+    box-shadow: 10px 10px 10px lightgrey;
+}
+h2 {
+    text-decoration: overline; 
+}
+.badam {
+    display: inline-block; 
+    width: 150px;
+    height: 150px; 
+}

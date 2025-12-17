@@ -1,0 +1,67 @@
+.efg {
+    color: rgb(93, 0, 255); /* use 'color' to set text color; 'font-color' is not valid CSS */
+}
+
+h1 {
+    color: chocolate;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+ol {
+    border: 20px solid purple;
+    /**
+     * @description Applies a drop shadow effect to an element
+     * @property {length} offset-x - Horizontal offset of 10px (moves shadow right)
+     * @property {length} offset-y - Vertical offset of 10px (moves shadow down)
+     * @property {length} blur-radius - Blur radius of 5px (softens shadow edges)
+     * @property {length} spread-radius - Spread radius of 5px (expands shadow size)
+     * @property {color} shadow-color - Shadow color set to grey
+     * 
+     * @note Creates a grey shadow effect positioned 10px right and 10px down from the element,
+     *       with a 5px blur and 5px spread for a soft, dimensional appearance.
+     *       This is useful for adding depth and emphasis to UI elements.
+     */
+    box-shadow: 10px 10px 5px 5px grey;
+    border-radius: 40px 30px 20px 10px; 
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#cha {
+    background-color: lightgreen;
+    margin: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+
+}
+div {
+    background-color: lightsalmon;
+}
+
+div button {
+    
+    display: block; 
+}
+
+
+* {
+    margin: 30px; 
+    /* padding: 10px;  */
+    
+}
+
+div p {
+    background-image: url('../rice.png');
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height: 100px; 
+    background-position: right;  
+}

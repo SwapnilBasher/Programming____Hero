@@ -1,0 +1,56 @@
+<h1>Html form</h1>
+<p> Html form is used to collect user input. The form element can contain various types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, and more. </p>
+
+<form action="">
+    <input type="text" name="username" placeholder="Enter your username"><br><br>
+    <input type="password" name="password" placeholder="Enter your password"><br><br>
+    <input type="button" value="Login"> <br><br>
+    <label for="role">Select your role:</label>
+    <select name="role" id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+        <option value="guest">Guest</option>
+        <option value="superadmin">Super Admin</option>
+        <option value="moderator">Moderator</option>
+        <option value="viewer">Viewer</option>
+    </select><br><br>   
+    <input type="submit" value="Submit">
+
+    <button type="button">Cancel</button>
+
+    <input type="date" name="appointment" > <br><br>
+    <input type="email" name="email" placeholder="Enter your email"> <br><br>
+    <input type="checkbox" name="subscribe" value="newsletter"> Subscribe to newsletter<br><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other<br><br>      
+
+    <input type="file" name="profile_picture"><br><br>
+
+
+</form>
+
+<p> Below is radio example:</p>
+<!-- MAIN GENDER GROUP -->
+<b>Select Gender:</b><br>
+<input type="radio" name="gender" value="male"> Male<br>
+<input type="radio" name="gender" value="female"> Female<br>
+<input type="radio" name="gender" value="other"> Other<br><br>
+
+<!-- MALE SUBGROUP -->
+<b>If Male, select type:</b><br>
+<input type="radio" name="male_type" value="trans_male"> Trans Male<br>
+<input type="radio" name="male_type" value="bi_curious_male"> Bi Curious<br>
+<input type="radio" name="male_type" value="straight_male"> Straight Male<br><br>
+
+<!-- FEMALE SUBGROUP -->
+<b>If Female, select type:</b><br>
+<input type="radio" name="female_type" value="trans_female"> Trans Female<br>
+<input type="radio" name="female_type" value="bi_curious_female"> Bi Curious<br>
+<input type="radio" name="female_type" value="straight_female"> Straight Female<br><br>
+
+<!-- OTHER SUBGROUP -->
+<b>If Other, select type:</b><br>
+<input type="radio" name="other_type" value="non_binary"> Non-binary<br>
+<input type="radio" name="other_type" value="gender_fluid"> Gender Fluid<br>
+<input type="radio" name="other_type" value="agender"> Agender<br>

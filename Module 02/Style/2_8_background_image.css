@@ -1,0 +1,21 @@
+.matha {
+    background-image: url('../rice.png');
+    /* rice.png */
+    background-color: mediumorchid;
+    background-repeat: repeat-y;  
+    height: 800px;
+    background-size: repeat;    
+}
+
+.s {
+    border: 3px solid orange;
+    box-shadow: 5px 5px 5px lightblue;
+    display: inline-block;
+}
+
+#abc {
+    background-color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;  
+}
