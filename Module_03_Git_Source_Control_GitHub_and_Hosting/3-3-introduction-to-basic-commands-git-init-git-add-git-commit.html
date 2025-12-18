@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Git Commands</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=38389&format=png&color=000000" type="image/png">
+</head>
+<body>
+    <h2>git init</h2>
+    <p>The <code>git init</code> command is used to create a new Git repository. When you run this command in a directory, it initializes a new Git repository by creating a hidden <code>.git</code> folder that contains all the necessary files and metadata for version control.</p>
+    <h2>git add</h2>
+    <p>The <code>git add</code> command is used to stage changes in your working directory for the next commit. You can use this command to add specific files or all changes in the directory to the staging area, preparing them to be committed to the repository.</p>
+    <h2>git commit</h2>
+    <p>The <code>git commit</code> command is used to save the staged changes to the repository. When you run this command, it creates a new commit that includes all the changes that were added to the staging area, along with a commit message that describes the changes made.</p>
+    <h2>git add .</h2>
+    <p>The <code>git add .</code> command is used to add all changes in the working directory to the staging area. This is a convenient way to stage all modified and new files for the next commit without having to specify each file individually.</p>
+    <ul>
+        <li>The dot (.) represents all files in the current directory and subdirectories.</li>
+        <li>It stages new files, modified files, and deleted files.</li>
+        <li>It is commonly used when you want to commit all changes in your project at once.</li>
+        <li>Git moves these files to a staging area where they are ready to be committed.</li>
+        <li>Staging = preparing files for commit.</li>
+        <li>Staging is the process of preparing files for a commit.</li>
+    </ul>
+    <h2>git commit -m "Initial commit"</h2>
+    <p>The <code>git commit -m "Initial commit"</code> command is used to create a new commit with a message describing the changes being committed. The <code>-m</code> flag allows you to specify the commit message directly in the command line, making it quick and easy to document your changes.</p>
+    <ul>
+        <li>The <code>-m</code> flag stands for "message" and is used to provide a commit message.</li>
+        <li>The commit message should be concise and descriptive of the changes made.</li>
+        <li>This command creates a new commit in the Git repository with the staged changes.</li>
+        <li>It is important to write meaningful commit messages for better project history.</li>
+    </ul>
+    <h2>git branch -M main</h2>
+    <p>The <code>git branch -M main</code> command is used to rename the current branch to "main". The <code>-M</code> flag stands for "move" and is used to rename branches in Git. This command is often used to set the default branch name to "main" instead of the traditional "master".</p>
+    <ul>
+        <li>The <code>-M</code> flag allows you to rename the branch even if the new branch name already exists.</li>
+        <li>This command is useful for standardizing branch names across repositories.</li>
+        <li>Renaming branches can help improve clarity and consistency in version control.</li>
+</body>
+</html>
