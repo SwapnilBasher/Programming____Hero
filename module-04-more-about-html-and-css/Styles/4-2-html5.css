@@ -1,0 +1,21 @@
+h1 {
+    background-color: lightblue;
+}
+nav ul li a {
+    color: darkblue;
+    text-decoration: none;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 15px 15px 15px 15px;
+}
+nav ul li:hover {
+    background-color: lightgray;
+}
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+    /* font-size: 14px; */
+}
