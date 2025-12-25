@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .personal-information label {
+            /* background-color: lightgray; */
+            /* padding: 10px; */
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gym Supplement</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset class="personal-information">
+                <legend>Personal Information</legend>
+                <label for="user-name">Please enter your name: </label>
+                <input type="text" name="username" id="user-name">
+                <!-- for="user-name" → matches id="user-name" -->
+                <!-- Must be unique. One element = one id -->
+                <br>
+                <label for="e-mail">Please enter your email: </label>
+                <input type="email" name="email" id="e-mail">
+                <br>
+                <label for="phone-no">Please enter your phone no: </label>
+                <input type="tel" name="phone-number" id="phone-no">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Supplement Information
+                </legend>
+
+                <input type="radio" name="supplement" id="whey-powder" value="whey-powder">
+                <label for="whey-powder">Whey Powder</label>
+                <br>
+                <input type="radio" name="supplement" id="creatine" value="creatine">
+                <label for="creatine">Creatine</label>
+                <br>
+                <input type="radio" name="supplement" id="bcaa" value="bcaa">
+                <label for="bcaa">BCAA</label>
+                <br>
+                <input type="radio" name="supplement" id="casein" value="casein">
+                <label for="casein">Casein</label>
+                <br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Items</legend>
+                <input type="checkbox" name="additional-item" id="multi-vitamins" value="multi-vitamins">
+                <label for="multi-vitamins">Multi-Vitamins</label>
+                <br>
+                <input type="checkbox" name="additional-item" id="fish-oil" value="fish-oil">
+                <label for="fish-oil">Fish Oil</label>
+                <br>
+                <input type="checkbox" name="additional-item" id="pre-workout" value="pre-workout">
+                <label for="pre-workout">Pre-Workout</label>
+                <br>
+                <input type="checkbox" name="additional-item" id="L-glutamine" value="L-glutamine">
+                <label for="L-glutamine">L-Glutamine</label>
+            </fieldset>
+            <fieldset>
+                <legend>Gym Instruments</legend>
+                <label for="gym-items">Please choose your gym instrument:</label>
+                <select name="gym-instruments" id="gym-items">
+                    <option value="dumbbells">Dumbbells</option>
+                    <option value="kettlebells">Kettlebells</option>
+                    <option value="resistance-bands">Resistance Bands</option>
+                    <option value="workout-gloves">Workout Gloves</option>
+                    <option value="jump-rope">Jump Rope</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Extra Info</legend>
+                <label for="extra-info">If you have anything to say, type here: </label>
+                <textarea cols="60" rows="5" name="extra-info" id="extra-info" placeholder="write here..."></textarea>
+            </fieldset>
+            <div style="background-color: chocolate;">
+                <br>
+                <label for="somoy">Select date and time: </label>
+                <br>
+                <input type="datetime-local" name="tarikh" id="somoy">
+                <br><br>
+            </div>
+
+
+            <input type="reset" value="Click here to reset this form" style="font-size: larger;">
+            <input type="submit" value="Click here to submit this form" style="font-style: italic;">
+        </form>
+    </main>
+    <footer>
+        <p>
+            <small>
+                &copy; 2025 Gym Supplement. All rights reserved.
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html>
