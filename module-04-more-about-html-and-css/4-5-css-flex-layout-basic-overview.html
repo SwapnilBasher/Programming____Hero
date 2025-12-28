@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Layout</title>
+    <style>
+        .container {
+            display: flex;
+
+        }
+
+        .container div {
+            background-color: lightblue;
+            border: 1px solid #000;
+
+            padding: 20px;
+            /* margin: 5px; */
+            text-align: center;
+            /* width: 50px; */
+            font-size: 1.5em;
+        }
+        .box-container {
+            /* display: none; */
+            /* display: inline-block;  */
+            display: flex ;
+            gap: 30px; 
+            
+        }
+        .box{
+            font-size: 4em;
+            border: 3px solid red;
+        }
+        .user{
+            border: 4px solid green;
+            font-size: 2em;
+            background-color: lightgray;
+        }
+        .user-container{
+            display: flex;
+            /* gap: 20px; */
+            margin-top: 20px;
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            justify-content: space-between;
+            /* gap: 20px; */
+            /* justify-content: space-evenly; */
+        }
+        .talika{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        li{
+            background-color: lightcoral;
+            padding: 10px;
+            border: 2px solid #000;
+            list-style: none;
+            /* list-style-image: url('https://www.kindpng.com/picc/m/80-807403_list-style-image-png-transparent-png.png') ; */
+        }
+        .card-container{
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+            margin-top: 20px;
+            flex-direction: row-reverse; 
+            justify-content: center; /* align-items: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3
+            <div>alu</div>
+            <div>potol</div>
+        </div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        
+        <div style="border: 10px solid gray;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse fugit
+            accusamus odit aperiam eius sunt quae expedita voluptatem nulla. Atque ducimus ipsum ad unde quasi velit
+            exercitationem consectetur quidem?
+        </div>
+
+        <div>AMI BANGLAR GAAN GAI</div>
+    </div>
+
+    <!-- .box-container 
+        dot likhe class name likhlei div er bhitore class set hoye jabe 
+    -->
+
+    <div class="box-container">
+        <!-- .box{$}*6 
+        dot likhe class name, dollar sign diye numbering, star diye koyta hobe ta set kora jay 
+        -->
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <div class="user-container">
+        <!-- .user{user-$}*3 
+        .user diye class name, curly bracket er moddhe text set kora jay, dollar sign diye numbering, star diye koyta hobe ta set kora jay 
+        -->
+        <div class="user">user-1</div>
+        <div class="user">user-2</div>
+        <div class="user">user-3</div>
+    </div>
+
+    <!-- 
+        display: flex; diye flexbox layout set kora jay 
+        gap diye item gulor moddhe distance set kora jay 
+        justify-content diye item gulor alignment set kora jay
+    -->
+
+    <ul class="talika">
+        <li>
+            যখন কোন  parent container এ অনেক গুলা চাইল্ড থাকবে, আমি যদি চাই এই চাইল্ড গুলা এক লাইনে সাজাতে, তখন সেই parent container এ CSS এর display: flex; প্রপার্টি ব্যবহার করবো।
+        </li>
+        <li>
+            চাইল্ড গুলার মধ্যে দূরত্ব বাড়াতে চাইলে parent container এ gap প্রপার্টি ব্যবহার করবো।
+        </li>
+    </ul>
+
+    <div class="card-container">
+        <div class="user">user-1</div>
+        <div class="user">user-2</div>
+        <div class="user">user-3</div>
+        <div class="user">user-4</div>
+        <div class="user">user-5</div>
+        <div class="user">user-6</div>
+        <div class="user">user-7</div>
+        <div class="user">user-8</div>
+        <div class="user">user-9</div>
+        <div class="user">user-10</div>
+        <div class="user">user-11</div>
+        <div class="user">user-12</div>
+        <div class="user">user-13</div>
+        <div class="user">user-14</div>
+        <div class="user">user-15</div>
+        <div class="user">user-16</div>
+        <div class="user">user-17</div>
+        <div class="user">user-18</div>
+        <div class="user">user-19</div>
+        <div class="user">user-20</div>
+    </div>
+
+</body>
+
+</html>
