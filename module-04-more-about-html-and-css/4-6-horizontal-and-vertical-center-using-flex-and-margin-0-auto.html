@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Centering</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0HE8u_4PwoFVpaPl_6NszxcS5KLFjDdP1A&s" type="image/x-icon">
+    <style>
+        .container{
+            background-color: lightgray; 
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start;  */
+            /* align-items: stretch;  */
+            height: 100vh; 
+            /* vh = viewport height 
+            100vh means 100% of the browser window height
+            so, height: 100vh makes an element as tall as the visible screen, no matter the device or screen size
+            */
+        }
+        .box{
+            background-color: aquamarine;
+            max-width: 50%;
+            font-size: 2em;
+            margin: 0 auto; /* this centers the box horizontally */
+            padding: 40px; 
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Oh, Fonsi! DY!
+            Ooh, oh, no, oh, no, oh
+            Hey, yeah!
+            Dididiri Daddy, go!
+            Yes, you know I've I've spent a long time looking at you
+            I must dance with you today (DY!)
+            I saw that your gaze was calling me
+            Show me the way that I will go</div>
+        </div>
+
+        <div>
+            <p>
+                <strong>Note:</strong> In this example, we used Flexbox to center the box both horizontally and vertically within the container. The container takes up the full height of the viewport (100vh), and the box is centered using `justify-content: center;` for horizontal centering and `align-items: center;` for vertical centering.
+            </p>
+        </div>
+
+</body>
+</html>
