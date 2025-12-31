@@ -1,0 +1,35 @@
+body{
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+.hero-container{
+    display: flex;
+    background-color: greenyellow;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+}
+div h1,p {
+    margin: 20px;
+}
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    font-size: large; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: darkorange;
+    color: white;
+}
+div img {
+    height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+}
