@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Task 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            /* border: 2px solid #000; */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        textarea, select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback Form</h1>
+    </header>
+    <main>
+        <form action="">
+            <label for="golpo">Share your story here:</label>
+            <br>
+            <textarea name="golpo" id="golpo" cols="30" rows="10" placeholder="Type your story here..." required></textarea>
+            <br>
+            <label for="rating">Rate the story:</label>
+            <br>
+            <select name="rating" id="rating">
+                <option value="" disabled selected>Select rating</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
