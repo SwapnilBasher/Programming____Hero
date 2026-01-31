@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        h1:hover{
+            color: red;
+            font-size: 50px;
+        }
+        input:focus{
+            border: 10px solid green;
+            background-color: rgb(216, 14, 14);
+            font-size: larger;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        a:visited{
+            color: rgb(226, 185, 109);
+            font-size: 100px;
+        }
+        ul li:first-child{
+            color: blue;
+            font-size: 30px;
+        }
+        ul li:last-child{
+            color: brown;
+            font-size: 50px;
+        }
+        ul li:nth-child(4n){
+            color: purple;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gym</h1>
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <input type="text"> <br> <br>
+    <a href="https://www.google.com">Google ey jay</a> <br> <br>
+    <a href="https://www.youtube.com">Youtube site e jay</a> <br><br>
+    <a href="https://www.britannica.com/place/Africa">Africa</a>
+    <ul>
+        <!-- li*7  -->
+         <li>hover</li>
+         <li>focus</li>
+         <li>visited</li>
+         <li>first child</li>
+         <li>last child</li>
+         <li>nth child 2n</li>
+         <li>nth child 2n+1</li>
+    </ul>
+</body>
+</html>
