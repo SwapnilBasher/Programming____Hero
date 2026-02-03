@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <link rel="shortcut icon" href="/module-04-more-about-html-and-css/images/panda.jpg" type="image/jpg">
+    <style>
+        .image-container {
+            max-width: 350px;
+            margin: auto;
+            border: 10px solid maroon;
+            padding: 5px 5px;
+            
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px dashed black;
+            box-sizing: border-box;
+            /* include border and padding in the element's total width and height.
+            content-box → border adds to size
+            border-box → border stays inside size
+            */
+        }
+
+        .aqua {
+            position: relative;
+            top: 500px;
+            right: 500px;
+        }
+
+        .darkness {
+            position: absolute;
+            left: 500px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .panda {
+            height: 150px;
+            width: 150px;
+            position: fixed;
+            left: 2000px;
+        }
+
+        .protein{
+            position: sticky;
+            top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="aqua">
+            <img src="/module-04-more-about-html-and-css/images/aqua-konosuba.png" alt="Aqua from Konosuba Anime">
+        </div>
+        <div class="darkness"><img src="/module-04-more-about-html-and-css/images/darkness-konosuba.jpg"
+                alt="Darkness from Konosuba Anime">
+        </div>
+        <div class="megumin">
+            <img src="/module-04-more-about-html-and-css/images/megumin-chibi-konosuba-cute-desktop-wallpaper-cover.jpg"
+                alt="Megumin from Konosuba Anime">
+        </div>
+
+        <img class="panda" src="/module-04-more-about-html-and-css/images/panda.jpg" alt="kung-fu-panda-po">
+
+        <img class="protein" src="/module-04-more-about-html-and-css/images/legion-whey.PNG" alt="whey-protein-powder">
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora voluptate dolorum nobis amet ad deleniti ea
+            ducimus consequuntur placeat esse. Ipsam ducimus delectus ex aperiam recusandae voluptatum corporis, natus
+            animi?</p>
+    </div>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+    <p>meow meow meow</p>
+</body>
+
+</html>

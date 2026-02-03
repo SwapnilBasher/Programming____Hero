@@ -9,13 +9,13 @@
             color: red;
             font-size: 50px;
         }
-        input:focus{
+        /* input:focus{
             border: 10px solid green;
             background-color: rgb(216, 14, 14);
             font-size: larger;
             margin-left: 20px;
             padding-left: 20px;
-        }
+        } */
         a:visited{
             color: rgb(226, 185, 109);
             font-size: 100px;
@@ -31,6 +31,10 @@
         ul li:nth-child(4n){
             color: purple;
             font-size: 40px;
+        }
+        .out-line-zero:focus{
+            outline: none;
+            box-shadow: 0 0 0 2px #4f46e5; /* box-shadow: X Y BLUR SPREAD COLOR; */
         }
     </style>
 </head>
@@ -52,5 +56,8 @@
          <li>nth child 2n</li>
          <li>nth child 2n+1</li>
     </ul>
+    <br>
+    <br>
+    <input class="out-line-zero" type="text">
 </body>
 </html>
