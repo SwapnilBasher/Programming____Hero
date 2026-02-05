@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z index & Pseudo (Element vs Class)</title>
+    <link rel="shortcut icon" href="/module-04-more-about-html-and-css/images/darkness-konosuba.jpg" type="image/jpg">
+    <style>
+        p.hand-sign::before{
+            content: "👉  ";
+            margin-right: 1rem;
+        }
+        b{
+            font-size: 3rem;
+        }
+        .sample::first-letter{
+            font-size: 5em;
+            color: red;
+        }
+        #cat::first-line{
+            font-weight: bold;
+            color: green;
+            font-size: 3em;
+        }
+        ::selection{
+            background-color: yellow;
+            color: rgb(229, 18, 229);
+            /* font-style: italic; */
+            /* font style kaj korbe na*/
+            text-shadow: 1px 1px 1px black;
+        }
+        /* .sample::before{
+            content: "🐱 "; 
+        } */
+        /* emoji ta boro hoye jay karon pseudo-element first letter use kora hoyeche age*/
+
+
+        button{
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover::after{
+            display: inline-block;
+            box-shadow: 2px 2px 5px 3px gray;
+            content: " 🎉";
+            font-size: 2rem;
+        }
+        button:hover::before{
+            content: "🎊 ";
+            font-size: 2rem;
+        }
+
+
+        input{
+            display: block;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+        }
+
+        input::placeholder{
+            /* display: block;
+            margin: 0 auto; */
+            font-style: italic;
+            color: rgb(229, 18, 18);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .girl{
+            /* position: absolute; */
+            position: relative;  
+            /* position property use korte hobe 
+               ta na hole z-index kaj korbe na
+               If position: static (the default), z-index is ignored.
+            */
+            z-index: 5;
+               
+        }
+        .grass{
+            /* opacity: 0.3; */
+            position: relative;
+            top: -100px;
+            z-index: 3;
+        }
+        .soil{
+            position: relative;
+            top: -180px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-class (:)</h1>
+    <p>A pseudo-class styles an element based on its state or condition.</p>
+    <p class="hand-sign">It answers: “When is this element?”</p>
+    <p>Syntax: single colon   <b>:</b></p>
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/1.PNG" alt=""> <br>
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/2.PNG" alt=""> <br>
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/3.PNG" alt=""> <br>
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/4.PNG" alt=""> <br>
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/5.PNG" alt=""> <br>
+
+    <p class="sample" id="cat">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, iure! Perferendis adipisci accusamus hic quaerat quam amet possimus error, nobis, sunt ex ipsam dolorum id praesentium nihil optio temporibus obcaecati quod vitae atque maxime fuga saepe eaque! Eius, repellat laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate commodi rem, alias odit blanditiis labore fugiat deleniti, id laborum consectetur doloremque nulla ducimus. Mollitia reprehenderit unde fugiat nemo necessitatibus aliquam nobis veniam modi ut harum inventore quam, excepturi libero beatae amet laborum exercitationem! Quis et quia consequatur dignissimos similique libero earum non voluptas optio sequi assumenda, ullam, alias, aliquam sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque ducimus, eius odio, possimus laborum incidunt placeat eaque amet consequatur atque rem quis ipsum ex at quod voluptate qui aut natus. Laboriosam asperiores, velit minima magni dolore ipsum labore alias corrupti ea, neque quod, placeat eos et quae totam consectetur accusantium hic impedit sed earum possimus quo deleniti nulla illo. Sequi modi vero laboriosam consectetur nulla rerum autem ab commodi suscipit recusandae, necessitatibus corrupti iure magni dolores architecto expedita perspiciatis!
+    </p>
+
+    <button>Enjoy Life!</button>
+    <br><br>
+
+    <input type="text" placeholder="Type something here......">
+
+    <br><br>
+
+    <img class="girl" src="/module-6.5-bonus-pseudo-class-elements-position/images/aqua.jpg" alt="">
+    <br>
+    <img class="grass" src="/module-6.5-bonus-pseudo-class-elements-position/images/grass.webp" alt="">
+    <br>
+    <img class="soil" src="/module-6.5-bonus-pseudo-class-elements-position/images/soil.jpg" alt="">
+
+</body>
+</html>
