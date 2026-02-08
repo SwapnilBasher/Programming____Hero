@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Measuring Units</title>
+    <style>
+        li {
+            font-size: larger;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>px (pixels) <small>1 inch = 96 px</small></li>
+        <li>em (relative to font size of the parent element)</li>
+        <li>rem (relative to root font size)</li>
+        <li>% (percentage of parent element) <small>relative to parent element's font size, 100% is the width of the
+                parent element</small></li>
+        <li>vw/vh (viewport width/height)</li>
+    </ol>
+    <div class="container">
+        <div>
+            <h3>Absolute</h3>
+            <ul>
+                <li>pixels (px)</li>
+                <li>inches (in)</li>
+                <li>centimeters (cm)</li>
+                <li>milimeters (mm)</li>
+                <li>points (pt)</li>
+                <li>picas (pc)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Relative</h3>
+            <ul>
+                <li>em</li>
+                <li>rem</li>
+                <li>%</li>
+                <li>vw/vh</li>
+                <li>vmax</li>
+                <li>vmin</li>
+            </ul>
+        </div>
+    </div>
+    <p style="font-size: 2in;" >abc</p> <!-- 2 inch mane 192px hobe karon 1 inch = 96px -->
+    <img src="/module-6.5-bonus-pseudo-class-elements-position/images/aqua.jpg" alt="aqua" style="width: 50%; height: auto;"> <!-- image er width parent element er 50% hobe -->
+    <img src="/module-04-more-about-html-and-css/images/megumin-chibi-konosuba-cute-desktop-wallpaper-cover.jpg" alt="" style="width: 70vw; height: auto;"> <!-- image er width viewport er 50% hobe -->
+</body>
+
+</html>
