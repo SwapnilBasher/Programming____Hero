@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        div {
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            border: 5px dotted black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        input {
+            margin-top: 10px;
+            width: 40vw;
+            height: 4vh; 
+            ;
+            /* display: block; */
+        }
+        input::placeholder{
+            font-size: larger;
+            font-style: italic;
+            color: rgb(230, 108, 20);
+        }
+        h3::after{
+            content: "🍤";
+            
+        }
+        h3::before{
+            content: "🌾";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="">Home</a>
+                <a href="">Profile</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+            </div>
+            <a href="">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h3>Please Login</h3>
+        <form action="">
+            <input type="email" name="email" id="email" required placeholder="Your Email">
+            <input type="password" name="password" id="password" required placeholder="Your Password">
+            <input type="submit" value="Login">
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
