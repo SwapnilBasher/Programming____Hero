@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        body {
+            border: 1px solid skyblue;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+        }
+        .image-container div{
+            width: 50%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 576px) {
+            .image-container {
+                flex-direction: column;
+            }
+            .image-container div{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- ul>li*7 -->
+    <header>
+        <ul>
+            <li>viewport meta tag</li>
+            <li>CSS Relative Unit</li>
+            <li>body max-width and horizontal centering</li>
+            <li>image fluid</li>
+            <li>two columns: display: flex and use media-query with flex direction column</li>
+            <li>multi column: grid layout</li>
+            <li>Menu Responsive : will need JavaScript</li>
+        </ul>
+    </header>
+    <main>
+        <div class="image-container">
+            <div class="chobi">
+                <img src="/Module 02/rice.png" alt="">
+            </div>
+            <div class="chobi">
+                <img src="/Module 02/rice.png" alt="">
+            </div>
+        </div>
+
+
+
+    </main>
+</body>
+
+</html>
