@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        .box-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box1,
+        .box2 {
+            width: 50%;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 576px) {
+            .box-container {
+                flex-direction: column;
+            }
+
+            .box1,
+            .box2 {
+                width: 100%;
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid skyblue;
+            height: 20vh;
+        }
+
+        .item1,
+        .item2,
+        .item3,
+        .item4 {
+            /* background-color: lightcoral; */
+            border: 2px solid white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 10vh; */
+        }
+
+        .item1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: pink;
+        }
+
+        .item2 {
+            grid-area: 1/2/2/4;
+            background-color: orange;
+        }
+
+        .item3 {
+            grid-area: 2/2/3/3;
+            background-color: magenta;
+        }
+
+        .item4 {
+            grid-area: 2/3/3/4;
+            background-color: darkgreen;
+        }
+
+        @media screen and (max-width: 576px) {
+            .grid-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .item1,
+            .item2,
+            .item3,
+            .item4 {
+                width: 100%;
+                height: 10vh;
+            }
+
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            /* height: 40vh; */
+            /* object-fit: cover; */
+            display: block;
+        }
+
+        .protein-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .protein-powder {
+            /* width: 50%; */
+            border: 1px solid skyblue;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lekha {
+            padding: 10px;
+        }
+
+        .nam {
+            margin: 0;
+        }
+
+        .bornona {
+            font-size: 14px;
+        }
+
+        .buy-me {
+            padding: 10px 20px;
+            background-color: lightcoral;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 576px) {
+            .protein-powder {
+                flex-direction: column;
+                
+            }
+
+            /* .protein-powder {
+                width: 100%;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        Task 1: Design a responsive flex layout
+    </h3>
+    <!-- .box-container>.box  -->
+    <div class="box-container">
+        <div class="box1">Left</div>
+        <div class="box2">Right</div>
+    </div>
+    <h3>
+        Task 2: Design a responsive grid layout
+    </h3>
+    <!-- div.grid-container>.item$*4  -->
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+    <h3>
+        Task 3: Adapt images for different devices
+    </h3>
+    <img src="/module-04-more-about-html-and-css/images/aqua-konosuba.png" alt="aqua from konosuba">
+    <h3>
+        Task 4: Design responsive layout - II
+    </h3>
+    <!-- div.protein-container>div.protein-powder*2>img+div.lekha>h4.nam+p.bornona+button.buy-me  -->
+    <div class="protein-container">
+        <div class="protein-powder">
+            <img src="/module-04-more-about-html-and-css/images/isopure.PNG" alt="isopure brand protein powder">
+            <div class="lekha">
+                <h4 class="nam">ISOPure Protein Powder</h4>
+                <p class="bornona">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat cumque mollitia ex
+                    at nemo deserunt vitae facilis. Minus maxime iure voluptates eligendi incidunt vitae dicta
+                    similique, cumque harum, veniam error?</p>
+                <button class="buy-me">Buy Now</button>
+            </div>
+        </div>
+        <div class="protein-powder">
+            <img src="/module-04-more-about-html-and-css/images/legion-whey.PNG" alt="legin whey brand protein powder">
+            <div class="lekha">
+                <h4 class="nam">Legion Whey Protein Powder</h4>
+                <p class="bornona">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat ab porro
+                    numquam quia, unde mollitia vitae veritatis nulla ipsam illum odio tempora voluptas. Et recusandae
+                    labore fugiat sint cum?</p>
+                <button class="buy-me">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
