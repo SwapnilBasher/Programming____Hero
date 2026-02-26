@@ -1,0 +1,302 @@
+.row{
+    /* width: 90vw; */
+    height: 400px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 5px;
+    margin-bottom: 5px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    /* height: auto; */
+    /* object-fit: cover; */
+}
+.row>div{
+    flex: 1;
+}
+.vertical-collage img{
+    height: calc( (100% - 5px)/2 ) ;
+}
+.square-collage{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+}
+.square-collage>img{
+    height: 198px;
+}
+body{
+    margin: 10px;
+    background-color: white
+}
+
+/* 
+    Great question 👍 This is a **very common confusion** in CSS.
+
+## ✅ `width: 100%`
+
+* Means: **100% of the parent element’s width**
+* Depends on the container
+* Respects padding of parent (usually behaves nicely inside layouts)
+
+### Example:
+
+```css
+img {
+  width: 100%;
+}
+```
+
+If the parent div is **800px**, the image becomes **800px**.
+
+If the parent div is **50% of screen**, image follows that.
+
+👉 It is *relative to the parent*.
+
+---
+
+## ✅ `width: 100vw`
+
+* Means: **100% of the viewport width**
+* Ignores parent width
+* Can cause horizontal scroll issues
+
+### Example:
+
+```css
+img {
+  width: 100vw;
+}
+```
+
+If your screen width is **1920px**, image becomes **1920px**,
+even if the parent is smaller.
+
+👉 It is *relative to the browser window*.
+
+---
+
+## ⚠️ Important Difference (Scrollbar Problem)
+
+`100vw` includes the vertical scrollbar width.
+
+So sometimes:
+
+```css
+width: 100vw;
+```
+
+➡ Creates **horizontal scrolling**
+➡ Causes layout overflow
+
+But:
+
+```css
+width: 100%;
+```
+
+➡ Does NOT usually cause that issue.
+
+---
+
+## 📊 Visual Explanation
+
+### `width: 100%` (Follows Parent)
+
+```
+|---------------- Screen ----------------|
+
+   |------ Parent Div ------|
+   |  Image = 100% (same)   |
+```
+
+---
+
+### `width: 100vw` (Follows Screen)
+
+```
+|---------------- Screen ----------------|
+| Image = Full Screen Width (ignores parent) |
+```
+
+---
+
+## 🧠 When To Use What?
+
+| Use Case                       | Recommended |
+| ------------------------------ | ----------- |
+| Normal website layout          | ✅ `100%`    |
+| Full-screen hero section       | ✅ `100vw`   |
+| Inside container/grid          | ✅ `100%`    |
+| Background banner edge-to-edge | ✅ `100vw`   |
+
+---
+
+## 💡 Pro Tip
+
+For responsive images inside containers, almost always use:
+
+```css
+img {
+  width: 100%;
+  height: auto;
+}
+```
+
+This keeps aspect ratio correct.
+
+---
+
+If you want, I can show a small HTML demo to test both visually 👀
+
+*/
+
+/* 
+This is another **very important CSS concept** 👌
+For images, `height: 100%` and `height: auto` behave very differently.
+
+---
+
+# ✅ `height: auto` (Recommended in most cases)
+
+* Keeps the **original aspect ratio**
+* Scales proportionally with width
+* Prevents image distortion
+
+### Example:
+
+```css
+img {
+  width: 100%;
+  height: auto;
+}
+```
+
+👉 What happens?
+
+* Image fills the width
+* Height adjusts automatically
+* No stretching
+
+📌 This is the **standard responsive image pattern**
+
+---
+
+# ⚠️ `height: 100%`
+
+* Makes the image take **100% of the parent’s height**
+* Can **distort** the image
+* Only works properly if parent has a fixed height
+
+### Example:
+
+```css
+.parent {
+  height: 300px;
+}
+
+img {
+  height: 100%;
+}
+```
+
+👉 The image becomes exactly 300px tall
+👉 Width adjusts based on aspect ratio
+👉 May overflow or stretch
+
+---
+
+# 🔍 Visual Difference
+
+## 🟢 `height: auto` (Keeps Ratio)
+
+```
+Original: 800x400 (2:1)
+
+width: 400px
+height: auto → becomes 200px
+```
+
+✔ Perfect proportion
+
+---
+
+## 🔴 `height: 100%` (Can Break Ratio)
+
+If parent height = 300px
+
+```
+Image forced to 300px height
+Width may not match proportion
+```
+
+❌ Can stretch or squish
+
+---
+
+# 🚨 Important Rule
+
+If you write:
+
+```css
+img {
+  width: 100%;
+  height: 100%;
+}
+```
+
+You are forcing:
+
+* Full width
+* Full height
+
+➡ This **almost always distorts the image**
+Unless the parent has the exact same aspect ratio.
+
+---
+
+# 🧠 When To Use What?
+
+| Situation                | Use                     |
+| ------------------------ | ----------------------- |
+| Responsive website       | ✅ `height: auto`        |
+| Inside fixed-height card | ⚠️ Maybe `height: 100%` |
+| Background-like image    | Better use `object-fit` |
+
+---
+
+# ⭐ Bonus: Best Way for Fixed Containers
+
+If you want image to fill a box without distortion:
+
+```css
+.parent {
+  width: 300px;
+  height: 300px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+
+✔ Fills box
+✔ Keeps ratio
+✔ Crops nicely
+
+---
+
+# 🎯 Simple Rule for You
+
+If you're building normal responsive layouts (which you are learning):
+
+👉 **Use `height: auto` 90% of the time**
+
+---
+
+If you want, I can show a live HTML example comparing all 3 (`auto`, `100%`, and `object-fit`) side by side 👀
+
+*/
