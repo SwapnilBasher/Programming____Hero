@@ -300,3 +300,110 @@ If you're building normal responsive layouts (which you are learning):
 If you want, I can show a live HTML example comparing all 3 (`auto`, `100%`, and `object-fit`) side by side 👀
 
 */
+
+
+
+
+
+
+
+
+/* 
+         In CSS (Flexbox),
+
+```css
+flex: 1;
+```
+
+is a **shorthand property**. It actually means:
+
+```css
+flex: 1 1 0%;
+```
+
+Which expands to:
+
+```css
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+```
+
+---
+
+## What Each Part Means
+
+### 1️⃣ `flex-grow: 1`
+
+The item **can grow** and will take up available space.
+
+If multiple flex items have `flex: 1`, they divide the available space equally.
+
+---
+
+### 2️⃣ `flex-shrink: 1`
+
+The item **can shrink** if there isn’t enough space.
+
+---
+
+### 3️⃣ `flex-basis: 0%`
+
+The item starts with **0 width (or height in column layout)** before growing.
+
+This is very important 👇
+Because it ignores the content size and distributes space evenly.
+
+---
+
+## Example
+
+```css
+.container {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+}
+```
+
+```html
+<div class="container">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+👉 Result:
+All 3 boxes will have **equal width**, even if their content is different.
+
+---
+
+## Compare With `flex: auto`
+
+```css
+flex: auto;  (means, = 1 1 auto )
+
+
+Here
+
+* `flex-basis: auto` → starts from content size
+* Items may not be perfectly equal
+
+---
+
+## Quick Summary
+
+| Property        | Meaning                      |
+| --------------- | ---------------------------- |
+| `flex: 1`       | Fill available space equally |
+| Expands to      | `1 1 0%`                     |
+| Most common use | Equal-width columns          |
+
+---
+
+If you want, I can also explain the difference between:
+`flex: 1` vs `flex-grow: 1` vs `flex: auto` in a very clear visual way.\
+*/
