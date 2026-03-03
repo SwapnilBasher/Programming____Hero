@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area Layout</title>
+    <style>
+        .header,
+        .nav,
+        .main,
+        .sidebar,
+        .advertise,
+        .footer {
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        .header {
+            background-color: grey;
+            grid-area: header;
+        }
+
+        .nav {
+            background-color: red;
+            grid-area: nav;
+        }
+
+        .main {
+            background-color: green;
+            grid-area: main;
+        }
+
+        /* .aside {
+            background-color: rgb(232, 235, 30);
+            grid-area: aside;
+        } */
+
+        .sidebar {
+            background-color: salmon;
+            grid-area: sidebar;
+        }
+
+        .advertise {
+            background-color: orange;
+            grid-area: advertise;
+        }
+
+        .footer {
+            background-color: rgb(13, 196, 237);
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            /* to assign the area name to the grid item, we use the property "grid-template-areas" */
+            grid-template-areas:
+                "header header header header"
+                "nav main main sidebar"
+                "nav main main advertise"
+                "footer footer footer footer";
+        }
+
+        /* to make the layout responsive, we can use media query */
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "advertise"
+                    "nav"
+                    "main"
+                    "sidebar"
+                    
+                    "footer";
+            }
+        }
+        /* medium devices */
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+            .container {
+                grid-template-areas:
+                    "header    header    header"
+                    "nav       nav       nav"
+                    "sidebar   main      main"
+                    "advertise footer    footer";
+            }
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header class="header">
+        <h1>
+            This is header.
+        </h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <!-- li*3>a{link $}  -->
+            <li><a href="">link 1</a></li>
+            <li><a href="">link 2</a></li>
+            <li><a href="">link 3</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section class="section">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe maiores delectus sint optio iste non cum,
+                qui dicta alias sit?</p>
+            <p>Neque, quidem esse. Vitae animi quae totam ullam amet beatae dolore? Asperiores minima facere aliquam et
+                aliquid accusamus alias porro?</p>
+        </section>
+    </main>
+    
+        <!-- div.sidebar>h4{Sidebar}^div.advertise>h4{Advertise}  -->
+        <div class="sidebar">
+            <h4>Sidebar</h4>
+        </div>
+        <div class="advertise">
+            <h4>Advertise</h4>
+        </div>
+    
+    <footer class="footer">
+        <h3>
+            This is footer.
+        </h3>
+    </footer>
+</body>
+
+</html>
