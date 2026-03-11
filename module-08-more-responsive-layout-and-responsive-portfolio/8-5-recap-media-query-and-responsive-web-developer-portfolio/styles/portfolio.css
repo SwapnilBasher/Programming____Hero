@@ -200,20 +200,18 @@ footer textarea {
 
 @media screen and (max-width:576px) {
 
-
-
-    .header{
+    .header {
         background-image: none;
     }
 
     .btn-primary,
-    ul>li{
+    ul>li {
         margin-bottom: 20px;
     }
 
-    .banner{
+    .banner {
         flex-direction: column-reverse;
-        margin: 20px; 
+        margin: 20px;
     }
 
     .skills-container,
@@ -242,5 +240,20 @@ footer textarea {
     footer textarea {
         width: calc(100% - 20px - 20px);
         /* karon footer tag ey padding dane and bame 20 + 20 = 40 px */
+    }
+}
+
+/* tablet specific */
+@media screen and (min-width: 577px) and (max-width: 990px) {
+    /* Add tablet-specific styles here */
+    .banner {
+        flex-direction: column;
+    }
+
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        /* width: 90%; */
     }
 }
