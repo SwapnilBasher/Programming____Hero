@@ -27,6 +27,16 @@
   background-color: rgba(255, 144, 14, 0.1);
 }
 
+.btn-primary {
+  background-color: rgba(255, 144, 14, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 20px 25px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+}
+
 /* header styles */
 
 
@@ -35,6 +45,21 @@
 /* navbar related styles */
 .navbar {
   justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 2.8rem;
+  /* 
+    figma te dekha jacche 45px but 2.8rem dileo same size as figma te hobe, karon figma te 16px ke 1rem dhoreche, tai 45/16 = 2.8125, so 2.8rem dileo same size as figma te hobe.
+    rem use korar karon holo, jodi future e font size change korte hoy, tahole rem use korle easily change kora jabe, karon rem use korle font size relative hobe root element er font size er, tai future e font size change korte hole sudhu root element er font size change korlei hobe, baki sob element er font size automatically adjust hoye jabe.
+    Most browsers 
+    html{
+      font-size: 16px;
+    }
+      so 1 rem = 16px, tai 45px ke rem e convert korte hole 45/16 = 2.8125, so 2.8rem dileo same size as figma te hobe.
+  */
+  font-weight: 700;
 }
 
 .nav-item {
@@ -53,4 +78,31 @@
   margin: 0 auto;
   /* upore niche 0 are dane-bame bhaga bhagi kore felbe */
 
+}
+
+/* banner related styles */
+
+.banner-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+/* responsive media query */
+@media screen and (max-width: 576px) {
+
+  .navbar,
+  .nav-links {
+    flex-direction: column;
+  }
 }
