@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS OverFlow</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: auto;
+        }
+        #box-1{
+            overflow-y: scroll;
+        }
+        #box-2{
+            overflow-x: scroll;
+        }
+        #header-1{
+            width: 500px;
+            height: 30px;
+            border: 10px solid pink;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1 title="Meow meow sings the cat, drinking milk beside the milk mountain" id="header-1">Meow meow sings the cat, drinking milk beside the milk mountain</h1>
+        <div id="box-1" class="box">
+            <h3>Paragraph - 1 </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur, animi omnis neque expedita nobis
+                sunt iure nisi nemo nam quos, hic molestias quaerat ab dolor veritatis vitae facilis nesciunt
+                accusantium
+                enim quisquam commodi exercitationem, delectus at. Perspiciatis, similique, fugit quas laudantium
+                dolorum
+                corrupti blanditiis iure recusandae perferendis harum impedit voluptates aperiam porro ducimus sed
+                consequatur fuga repellat. Natus, ipsam odit ratione incidunt laboriosam optio nam pariatur doloremque
+                quis
+                quasi. Sed quia sequi sunt, sint culpa asperiores dolores exercitationem dolorum odit enim, modi,
+                doloremque
+                rem. Aut distinctio maiores nam quod temporibus ipsum, voluptatibus deleniti hic quae voluptatem
+                accusantium! Beatae vero consequatur, reprehenderit nemo vel maxime consectetur ut, incidunt sequi quis
+                numquam laborum provident quia! Dolorem atque eaque quod exercitationem impedit!</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>Paragraph - 2 </h3>
+            <p>Vel itaque a iure, at harum illo, alias officia iste, porro ipsum amet? Eveniet laboriosam repudiandae
+                porro
+                reiciendis voluptates temporibus molestias nemo aperiam illum tempora? Unde reprehenderit quod maxime
+                corporis, repudiandae eligendi architecto aliquam, corrupti minus dolores ratione id totam. Beatae
+                veritatis
+                quae aspernatur distinctio iste minus sint architecto officia ad at praesentium eaque facilis laudantium
+                qui
+                mollitia, rem hic excepturi cumque eligendi atque! Iusto tempora amet laudantium tempore minima. Quia
+                molestiae quo necessitatibus officiis assumenda placeat voluptatibus esse fugiat, dolore molestias
+                perspiciatis beatae quidem voluptatum a cumque architecto amet et. Ipsa impedit in voluptate dolores
+                necessitatibus mollitia dolore facilis atque id magni deserunt consequatur tenetur eum nulla inventore
+                accusantium et delectus aliquam reprehenderit ut, vero quod? Reprehenderit, cumque placeat.</p>
+        </div>
+        <div id="box-3" class="box">
+            <h3>Paragraph - 3 </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur, animi omnis neque expedita nobis
+                sunt iure nisi nemo nam quos</p>
+        </div>
+    </section>
+</body>
+
+</html>
