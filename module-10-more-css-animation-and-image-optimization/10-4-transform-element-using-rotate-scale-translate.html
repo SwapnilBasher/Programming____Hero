@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        section {
+            padding: 50px;
+            background-color: aqua;
+            scale: 0.5;
+            rotate: 30deg;
+            translate: 50px 50px;
+
+        }
+
+        .container,
+        .box {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            background-color: lightgray;
+        }
+
+        .box {
+            background-color: pink;
+            /* transform: rotate(30deg);
+            transform: scale(0.4);
+            transform: translate(300px,100px); */
+            transform: rotate(45deg) scale(0.4) translate(300px, 100px);
+        }
+
+        .box:hover,
+        section:hover {
+            transform: rotate(-45deg) scale(0.5);
+            /* scale: .5; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZSQuEAVEHGs?si=JH32P2gE_H5zbspo"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <br>
+    <section>
+        <div class="container">
+            <div class="box"></div>
+        </div>
+        <div class="container">
+            <div class="box"></div>
+        </div>
+        <div class="container">
+            <div class="box"></div>
+        </div>
+    </section>
+</body>
+
+</html>
