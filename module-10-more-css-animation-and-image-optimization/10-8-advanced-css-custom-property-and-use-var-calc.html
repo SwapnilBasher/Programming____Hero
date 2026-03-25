@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom Property aka Variable</title>
+    <style>
+        :root {
+            --my-var: red;
+            --primary-color: purple;
+            --secondary-color: blue;
+            --font-size: 30px;
+        }
+
+        p {
+            color: rgb(38, 220, 92);
+            font-size: 1.4rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        h5 {
+            background-color: var(--primary-color);
+        }
+
+        .box {
+            border: 2px solid var(--primary-color);
+            width: calc(100vw - 300px);
+        }
+
+        .box p {
+            color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+
+        .sidebar {
+            background-color: lightgray;
+        }
+
+        .content {
+            background-color: lightskyblue;
+        }
+
+        .container {
+            margin-top: 30px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 200px calc(100% - 200px - 20px);
+            grid-template-rows: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <a href="https://www.w3schools.com/css/css3_variables.asp" target="_blank" rel="noopener noreferrer">CSS
+            Variables - var() Function : w3schools </a>
+        <h3>
+            Notes:
+        </h3>
+        <ul>
+            <li>CSS variables can have a global or local scope.</li>
+            <li>A CSS variable name must begin with two dashes (--) and is <b>case sensitive!</b></li>
+        </ul>
+    </section>
+    <section>
+        <p style="color: var(--my-var);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veritatis laborum esse iste ab rerum
+            animi blanditiis omnis officia aliquam!
+        </p>
+    </section>
+
+    <h1>My Custom Properties</h1>
+    <h5>Also commonly known as CSS variables.</h5>
+
+    <div class="box">
+        <h3>I am doing something.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati nam eligendi iure libero fugit
+            dolore pariatur dolores! Aliquid, molestiae?</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content</div>
+    </div>
+</body>
+
+</html>
