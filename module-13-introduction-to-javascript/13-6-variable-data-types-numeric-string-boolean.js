@@ -13,6 +13,7 @@ console.log(hasCycle); // false
 console.log(district); // This will work because 'district' is declared with 'var' and is function-scoped, so it is accessible outside the block.
 /*
 console.log(city); // This will throw an error because 'city' is block-scoped and cannot be accessed outside the block.
+
 console.log(country); // This will throw an error because 'country' is block-scoped and cannot be accessed outside the block.
 */
 
