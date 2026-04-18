@@ -74,6 +74,15 @@
 // console.log( cities.slice( 0 , -2 ) ) ; // [ 'Dhaka', 'Chittagong', 'Khulna' ]
 
 
-let flowers = [ "rose" , "lily" , "tulip" , "daisy" , "sunflower" ] ;
-console.log( flowers.splice( 2 , 2 ) ) ; // [ 'tulip', 'daisy' ]
-console.log( flowers ) ; // [ 'rose', 'lily', 'sunflower' ] 
+let flowers = ["rose", "lily", "tulip", "daisy", "sunflower"];
+console.log(flowers.splice(2, 2)); // [ 'tulip', 'daisy' ]
+console.log(flowers); // [ 'rose', 'lily', 'sunflower' ] 
+
+//add items
+flowers.splice(1, 0, "orchid", "jasmine"); 
+// adding "orchid" and "jasmine" at index 1 without removing any element
+console.log(flowers); // [ 'rose', 'orchid', 'jasmine', 'lily', 'sunflower' ]
+
+// replace items
+flowers.splice(-1, 1, "marigold"); 
+console.log(flowers); // [ 'rose', 'orchid', 'jasmine', 'lily', 'marigold' ]  
