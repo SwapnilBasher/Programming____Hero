@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p class="abc">This is a <span class="xyz">simple</span> paragraph.</p>
+    <ul id="xyz">
+        <li class="abc"><b>Item <span>pp <b>TalTola te jai</b> </span> Lau</b></li>
+        <li><b>Item Bel</b></li>
+        <li><b>Item PineApple</b></li>
+        <li class="abc"><b>Item Tormuj</b></li>
+    </ul>
+    <script>
+        console.log(document.querySelector('h1')); // this will return the first h1 element in the document
+
+        console.log(document.querySelectorAll('li')); // this will return a NodeList of all the li elements in the document
+
+        console.log(document.querySelector('p').innerText); // this will return the innerText of the first p element in the document
+
+        console.log(document.querySelectorAll('li')[1].innerText); // this will return the innerText of the second li element in the document
+        let items = document.querySelectorAll('li'); // items is a NodeList of all the li elements in the document
+        for (let item of items) {
+            console.log('Item: ' + item.innerText); // this will print the innerText of each li element in the document
+        }
+        console.log(document.querySelector('.abc').innerText); // this will return the innerText of the first element with class 'abc' in the document
+        console.log(document.querySelector('#xyz').innerText); // this will return the innerText of the element with id 'xyz' in the document
+        console.log(document.querySelectorAll('#xyz .abc')[0].innerText); // this will return the innerText of the first element with class 'abc' in the document
+        console.log(document.querySelector('.abc span b').innerText);  // this will return the innerText of the first b element that is a descendant of a span element that is a descendant of an element with class 'abc' in the document
+    </script>
+</body>
+</html>

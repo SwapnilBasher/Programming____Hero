@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color {
+            background-color: lightseagreen;
+        }
+
+        .text-align {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Hello, World!
+        </h1>
+    </header>
+    <main>
+        <section>
+            <p class="description abc xyz">This is a simple paragraph.</p>
+        </section>
+        <section>
+            <ul id="xyz">
+                <li class="abc"><b>Item 1</b></li>
+                <li><b>Item 2</b></li>
+                <li><b>Item 3</b></li>
+                <li class="abc"><b>Item 4</b></li>
+            </ul>
+        </section>
+        <section>
+            <figure>
+                <a href="https://chatgpt.com/s/t_6a12867293508191892e613c3d89a0b1" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/images/panda.jpg" alt="Kung Fu Panda" width="300">
+                </a>
+                <figcaption class="description">
+                    Our Shop
+                </figcaption>
+            </figure>
+            <button onclick="changeText()">Click Me</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+    <script>
+        const headerElementH1 = document.querySelector('header h1');
+        console.log(headerElementH1.style);
+        headerElementH1.style.color = 'red';
+        headerElementH1.style.fontSize = '50px';
+        headerElementH1.style.backgroundColor = 'yellow';
+
+        const descriptionElement = document.querySelectorAll('.description');
+        console.log(descriptionElement);
+        descriptionElement.forEach(element => {
+            element.style.color = 'blue';
+            element.style.fontSize = '20px';
+            element.style.fontStyle = 'italic';
+        });
+
+        let paragraphElement = document.querySelector('p').classList; // get the class list of the first paragraph element
+        console.log('The classes are:', paragraphElement);
+
+        paragraphElement.remove('abc');
+        paragraphElement.remove('xyz');
+        console.log('The classes are:', paragraphElement);
+
+        const sectionElement = document.querySelectorAll('section');
+        console.log(sectionElement);
+        sectionElement.forEach(element => {
+            element.setAttribute('class', 'bg-color text-align');
+        });
+
+        let link = document.querySelector('a');
+        console.log(link.getAttribute('href'));
+        link.setAttribute('href', 'https://leetcode.com/problems/get-equal-substrings-within-budget/description/');
+        console.log(link.getAttribute('href'));
+
+        document.querySelector('img').setAttribute('src', 'https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/goblinslayer.png');
+        document.querySelector('figcaption').innerText = 'GOBLIN SLAYER';
+
+        console.log(document.querySelector('a').getAttribute('rel')); 
+
+        function changeText() {
+            document.querySelector('button').innerHTML = '<b>GOBLIN SLAYER</b>';
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <header>
+        <h1>This is <span>the</span> header</h1>
+    </header>
+    <main>
+        <h1>
+            welcome
+        </h1>
+        <ul>
+            <li>
+                <b>
+                    <i>
+                        alu
+                    </i>
+                </b>
+            </li>
+            <li>cucumber</li>
+            <li>xylophone</li>
+        </ul>
+    </main>
+    <footer></footer>
+    <script>
+        // console.log(document);
+        console.log(document.getElementsByTagName('h1')); // this will return an HTMLCollection of all the h1 elements in the document. it will return a live collection, which means that if we add or remove any h1 element from the document, the collection will be updated automatically.
+        console.log(document.getElementsByTagName('span')); // this will return an HTMLCollection of all the span elements in the document.
+        let a = document.getElementsByTagName('h1');
+        console.log(typeof a); // this will return object because getElementsByTagName returns an HTMLCollection which is an object.
+        console.log(a.length); // this will return the number of h1 elements in the document
+        console.log(a[0].innerHTML); // this will return the innerHTML of the first h1 element in the document
+        console.log(a[0].innerText); // this will return the innerText of the first h1 element in the document
+
+        let b = document.getElementsByTagName('li');
+
+        console.log(typeof b);
+        console.log(b.length);
+        console.log(b[0].innerHTML);
+        console.log(b[0].innerText);
+
+        for(let i = 0; i < b.length; i++){
+            console.log('this is loop: ' , b[i].innerText);
+        }
+
+    </script>
+    <!-- <script src="/js/hello.js">
+        console.log('hau mau kau manusher gondho pao'); // this will not work because when we use src attribute in script tag, the content inside the script tag will be ignored. So we can not write any code inside the script tag when we are using src attribute.
+    </script> -->
+</body>
+
+</html>

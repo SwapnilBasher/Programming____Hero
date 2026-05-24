@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #food-title {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="abc">
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>grapes</li>
+                <li>orange</li>
+            </ul>
+        </section>
+        <section class="abc">
+            <h1 id="food-title">
+                foods I like
+            </h1>
+            <ul>
+                <li>protein</li>
+                <li>carrot</li>
+                <li>lentils</li>
+                <li>milk</li>
+                <li class="foreign-food">burger</li>
+                <li class="foreign-food">pasta</li>
+                <li class="foreign-food">pizza</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        document.getElementById('food-title').style.backgroundColor = 'yellow'; // this will change the background color of the element with id 'food-title' to yellow.
+
+        console.log(document.getElementById('food-title')); // this will return the element with id 'food-title'
+
+        console.log(document.getElementsByClassName('food-title')); // this will return an HTMLCollection of all the elements with class 'food-title'. since there is no element with class 'food-title', it will return an empty HTMLCollection.
+
+        console.log(document.getElementById('food-title').innerText); // this will return the innerText of the element with id 'food-title'
+
+        console.log(document.getElementsByClassName('abc').innerText); // this will return undefined because getElementsByClassName returns an HTMLCollection and HTMLCollection does not have innerText property. we need to access the first element of the collection to get the innerText property.
+
+        console.log(document.getElementsByClassName('abc')[1].innerText); // this will return the innerText of the second element with class 'abc'
+
+        let a = document.getElementsByClassName('foreign-food'); // a is an HTMLCollection of all the elements with class 'foreign-food'
+
+        for (let food of a) {
+            console.log('Food no. ' + (Array.from(a).indexOf(food) + 1) + ': ' + food.innerText); // this will print the innerText of each element with class 'foreign-food'
+        }
+    </script>
+</body>
+
+</html>
