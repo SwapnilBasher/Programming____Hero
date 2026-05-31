@@ -47,7 +47,7 @@
             <button onclick="changeText()">Click Me</button>
         </section>
     </main>
-    <footer>
+    <footer onclick="changeColor()">
         <p>&copy; 2023 My Website. All rights reserved.</p>
     </footer>
     <script>
@@ -86,12 +86,14 @@
         document.querySelector('img').setAttribute('src', 'https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/goblinslayer.png');
         document.querySelector('figcaption').innerText = 'GOBLIN SLAYER';
 
-        console.log(document.querySelector('a').getAttribute('rel')); 
+        console.log(document.querySelector('a').getAttribute('rel'));
 
         function changeText() {
             document.querySelector('button').innerHTML = '<b>GOBLIN SLAYER</b>';
         }
-
+        function changeColor() {
+            document.querySelector('footer').classList.toggle('bg-color');
+        }
     </script>
 </body>
 

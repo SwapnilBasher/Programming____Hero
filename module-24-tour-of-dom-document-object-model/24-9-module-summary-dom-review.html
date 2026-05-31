@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Summary</title>
+</head>
+
+<body>
+    <main>
+        <section class="section-title">
+            <h1 id="first-title">Section Title - 1</h1>
+            <ul>
+                <li>Item - 1</li>
+                <li>Item - 2</li>
+                <li>Item - 3</li>
+                <li>Item - 4</li>
+                <li>Item - 5</li>
+            </ul>
+        </section>
+        <section class="section-title">
+            <h1>Section Title - 2</h1>
+            <ul>
+                <li>Item - 1</li>
+                <li>Item - 2</li>
+                <li>Item - 3</li>
+                <li>Item - 4</li>
+                <li>Item - 5</li>
+            </ul>
+        </section>
+        <section class="section-title">
+            <h1>Section Title - 3</h1>
+            <ul id="third-list">
+                <li>Item - 1</li>
+                <li>Item - 2</li>
+                <li>Item - 3</li>
+                <li>Item - 4</li>
+                <li>Item - 5</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        const allSections = document.getElementsByTagName('section');
+        console.log(allSections);
+        const firstTitle = document.getElementById('first-title');
+        console.log(firstTitle);
+        firstTitle.innerText = 'Amar Sonar Bangla Song';
+        const sections = document.getElementsByClassName('section-title');
+        console.log(sections);
+        const thirdList = document.querySelector('#third-list');
+        console.log(thirdList);
+        const li = document.createElement('li');
+        li.innerText = 'Nirvana in Fire C-drama';
+        thirdList.appendChild(li);
+        li.onclick = function () { // onclick event handler for the new list item, onclick is a property of the DOM element that can be assigned a function to be executed when the element is clicked.
+            alert('You clicked on the new list item!');
+            li.style.color = 'red';
+            li.style.fontWeight = 'bold';
+            li.style.fontSize = '20px';
+            li.style.cursor = 'pointer';
+            li.style.textDecoration = 'underline';
+        };
+    </script>
+</body>
+
+</html>

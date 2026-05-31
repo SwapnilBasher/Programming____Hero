@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main-container">
+        <section>
+
+        </section>
+
+        <section class="food">
+            <h1>Food</h1>
+            <ul>
+                <li>Pizza</li>
+                <li>Burger</li>
+                <li>Pasta</li>
+                <li>Fries</li>
+                <!-- <li>Roll</li>  -->
+            </ul>
+        </section>
+        <section id="players-container">
+            <h1>Players</h1>
+            <ul>
+                <li>Messi</li>
+                <li>Ronaldo</li>
+                <li>Maradona</li>
+                <li>Beckham</li>
+                <!-- <li>Chele</li>  -->
+            </ul>
+        </section>
+    </main>
+    <script>
+        // console.log('File Connected');
+        const sections = document.querySelectorAll('section');
+        // console.log(sections);
+        for (let section of sections) {
+            section.classList.add('highlight');
+            section.style.textAlign = 'center';
+            // console.log(section);
+        }
+
+        document.querySelectorAll('li').forEach(item => {
+            item.style.listStyle = 'none';
+        });
+
+        // parent node
+        let mainContainer = document.getElementById('main-container');
+        // console.log(mainContainer);
+        // create element
+        let placesSection = document.createElement('section');
+
+        // create a h1 tag
+        let placesHeading = document.createElement('h1');
+        placesHeading.textContent = 'Places I want to visit';
+
+        // create a ul tag
+        let placesList = document.createElement('ul');
+        // create li tags
+        let place1 = document.createElement('li');
+        place1.innerText = 'Paris';
+        let place2 = document.createElement('li');
+        place2.innerText = 'New York';
+        let place3 = document.createElement('li');
+        place3.innerText = 'Tokyo';
+        
+        // append placesSection to mainContainer
+        mainContainer.appendChild(placesSection);
+
+        // append placesHeading to placesSection
+        placesSection.appendChild(placesHeading);
+
+        // append placesList to placesSection
+        placesSection.appendChild(placesList);
+        // append place1, place2, place3 to placesList
+        placesList.appendChild(place1);
+        placesList.appendChild(place2);
+        placesList.appendChild(place3);
+
+
+        // easier way to append multiple elements
+
+        let hobbiesSection = document.createElement('section');
+
+        hobbiesSection.innerHTML = `
+            <h1>Hobbies</h1>
+            <ul>
+                <li>Reading</li>
+                <li>Traveling</li>
+                <li>Cooking</li>
+                <li>Variety is the spice of life</li>
+            </ul>
+        `;
+
+        mainContainer.appendChild(hobbiesSection);
+
+        hobbiesSection.classList.add('highlight');
+        // hobbiesSection.style.textAlign = 'center';
+
+
+    </script>
+</body>
+
+</html>
