@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick Handler</title>
+    <style>
+        .red{
+            border: 2px solid gold;
+            margin-bottom: 10px;
+        }
+        .yellow{
+            border: 3px dotted salmon;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <div class="red" onclick="document.body.style.backgroundColor='red'" >
+                <h1> This is 1st heading </h1>
+            </div>
+            <div class="yellow" onclick="makeYellow()">
+                <h1 id="abc"> This is 2nd heading </h1>
+            </div>
+            <button>
+                Click Me ! 
+            </button>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function makeYellow() {
+            // console.log('hello world!');
+            let division = document.querySelector('.yellow');
+            // console.log(division);
+            division.style.border = '10px solid purple';
+            division.style.backgroundColor = 'yellow';
+        }
+
+        function moveHeading() {
+            // makeYellow();
+            let firstDiv = document.querySelector('.red');
+            let removedHeader = document.querySelector('#abc');
+            firstDiv.appendChild(removedHeader);     // Move the heading to the first div
+        }
+
+        let btn = document.getElementsByTagName('button');
+
+        btn[0].onclick = moveHeading;
+
+
+    </script>
+</body>
+</html>
