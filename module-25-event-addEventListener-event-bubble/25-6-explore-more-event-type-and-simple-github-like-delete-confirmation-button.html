@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events & Delete Button</title>
+    <style>
+        h1 {
+            border: 3px solid goldenrod;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header-1">25-6 Explore more event type and Simple github like delete confirmation button</h1>
+    <input type="text" placeholder="Type something here . . . " id="input-box">
+    <button id="delete-button" disabled>Delete</button>
+    <script>
+        let headerOne = document.getElementById('header-1');
+        // console.log(headerOne);
+        headerOne.addEventListener('mouseenter', function (event) {
+            // console.log('mouse entered');
+            // console.log(event);  // this will give us the event object which contains all the information about the event that occurred
+            // console.log(event.target); // this will give us the element on which the event is triggered
+            // // console.log(event.key); // this will be undefined because mouseenter event does not have key property
+            // console.log(event.type); // this will give us the type of event that occurred
+            // // console.log(event.target.value);    // this will be undefined because h1 element does not have value property
+            // console.log(event.target.innerHTML); // this will give us the inner HTML of the h1 element which is the text inside the h1 element
+        });
+        headerOne.addEventListener('mousemove', function (event) {
+            // console.log('mouse moved');
+        });
+        headerOne.addEventListener('mouseout', function (event) {
+            // console.log('mouse left the element');
+        });
+        let inputBox = document.getElementById('input-box');
+        inputBox.addEventListener('focus', function (event) {
+            // console.log('input box focused');
+        });
+        inputBox.addEventListener('blur', function (event) {
+            // console.log('input box blurred');
+            // console.log(event);
+        });
+        // inputBox.addEventListener('keydown',function (event) {
+        //     console.log('key down');
+        //     console.log(event);
+        //     console.log(event.key); // this will give us the key that is pressed
+        //     console.log('text inside is: ' , event.target.value); // this will give us the current value of the input box after the key is pressed . Since this event is triggered before the value of the input box is updated, it will give us the value of the input box before the key is pressed
+        // });
+        inputBox.addEventListener('keyup', function (event) {
+            // console.log('key up');
+            // console.log(event);
+            // console.log(event.key); // this will give us the key that is released
+            // console.log('text inside is: ' , event.target.value); // this will give us the current value of the input box after the key is released . Since this event is triggered after the value of the input box is updated, it will give us the value of the input box after the key is pressed
+            if (event.target.value === 'delete') {
+
+                // document.getElementById('delete-button').disabled = false;
+
+                document.getElementById('delete-button').removeAttribute('disabled');
+
+                document.getElementById('delete-button').addEventListener('click', function (event) {
+                    // document.getElementById('header-1').style.display = 'none'; // this will hide the element and it will not take up space in the layout
+
+                    document.getElementById('header-1').style.visibility = 'hidden'; // this will hide the element but it will still take up space in the layout
+                });
+
+            } else {
+                document.getElementById('delete-button').disabled = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

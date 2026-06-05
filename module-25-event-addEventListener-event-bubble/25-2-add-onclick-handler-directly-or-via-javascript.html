@@ -21,10 +21,12 @@
     </header>
     <main>
         <section>
+            // We can add onclick handler directly in the HTML element using the onclick attribute, or we can add it via JavaScript.
             <div class="red" onclick="document.body.style.backgroundColor='red'" >
                 <h1> This is 1st heading </h1>
             </div>
-            <div class="yellow" onclick="makeYellow()">
+            // Here we are adding the onclick handler via JavaScript, so when we click on the button, it will move the second heading to the first div and also change the background color of the first div to yellow.
+            <div class="yellow" onclick="makeYellow()"> 
                 <h1 id="abc"> This is 2nd heading </h1>
             </div>
             <button>

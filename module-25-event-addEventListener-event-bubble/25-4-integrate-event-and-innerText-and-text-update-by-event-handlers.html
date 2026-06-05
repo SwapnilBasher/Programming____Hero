@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <h1 id="header-1">Black Clover</h1>
+    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illum. Nesciunt quod, molestias nisi qui
+        excepturi dolorem similique eaque, nemo esse reprehenderit et velit eum cupiditate ea ab, neque repellat!</p>
+    <button id="btn-1">Click</button>
+    <br>
+    <br>
+    <input type="text" name="" id="input-1" placeholder="Enter your name...">
+    <script>
+        let button1 = document.getElementById('btn-1');
+        button1.addEventListener('click', function fu(event) {
+            let header = document.getElementById('header-1');
+            header.innerText = 'Full Metal Alchemist Brotherhood';
+        });
+        button1.addEventListener('click', function another(event) {
+            let inputOne = document.getElementById('input-1');
+            document.getElementById('para-1').innerText = inputOne.value;
+
+        });
+    </script>
+</body>
+
+</html>

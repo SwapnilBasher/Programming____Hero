@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+    <style>
+        p{
+            border: 2px solid goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"> Click Me ! </button>
+    <br>
+    <button class="abc"> Mouse </button>
+    <br>
+    <p onmouseover="f()" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sapiente perspiciatis vero sint delectus, nam iure culpa repellat, voluptatibus quos maxime omnis consequatur nisi quaerat? Sequi voluptate placeat nulla enim!</p>
+    <br>
+    <ul>
+        <li>pineapple</li>
+        <li>watermelon</li>
+        <li>jackfruit</li>
+    </ul>
+    <script>
+        document.querySelector('#btn').addEventListener('click', function goodCat() {
+            alert('A button has been clicked.');        
+        }) ;
+        document.getElementsByClassName('abc')[0].onmouseover = function () {
+            alert('Tom & Jerry!');
+        };
+        function f() {
+            console.log('Variety is the spice of life.');
+        }
+        document.querySelector('ul').addEventListener('mouseout', function anyName() {
+            console.log('What happens?');
+        });
+    </script>
+</body>
+</html>

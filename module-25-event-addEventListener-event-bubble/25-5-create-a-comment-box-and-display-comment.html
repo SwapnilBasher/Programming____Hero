@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <style>
+        .cmt {
+            border: 2px solid goldenrod;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My comments: </h1>
+        <p class="cmt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque vero exercitationem quia neque
+            ab laborum rerum maxime quibusdam soluta totam.</p>
+        <p class="cmt">Esse tempora quis voluptas, inventore, autem voluptates quisquam ipsum debitis doloribus magnam
+            ducimus nostrum voluptatibus. Delectus incidunt sit architecto facere.</p>
+        <p class="cmt">Asperiores et quidem officia. Cumque, nobis quos. Harum, recusandae corporis, dignissimos fuga
+            ullam ad, voluptatum molestiae fugiat voluptatibus soluta laborum!</p>
+    </div>
+    <textarea name="" id="comment-box" cols="30" rows="10" placeholder="Write your comment here . . . "></textarea>
+    <br>
+    <br>
+    <button id="btn">Submit your comment</button>
+    <script>
+        document.getElementById('btn').addEventListener('click', function f() {
+            // create a new element
+            let newComment = document.createElement('p');
+            newComment.innerText = document.getElementById('comment-box').value;
+            document.getElementById('container').appendChild(newComment);
+            newComment.classList.add('cmt');
+            document.getElementById('comment-box').value = '';
+        });
+    </script>
+</body>
+
+</html>
