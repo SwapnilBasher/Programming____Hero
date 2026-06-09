@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+    <style>
+        ol{
+            border: 5px solid yellow;
+            margin: 45px;
+            padding: 35px;
+        }
+        .item{
+            border: 5px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ol#list-container>li.item-$*6{This is item $}  -->
+     <ol id="list-container">
+        <li class="item">This is item 1</li>
+        <li class="item">This is item 2</li>
+        <li class="item">This is item 3</li>
+        <li class="item">This is item 4</li>
+        <li class="item">This is item 5</li>
+        <li class="item">This is item 6</li>
+     </ol>
+     <br>
+     <br>
+     <button id="btn">Click to add an item</button>
+     <script src="/js/event-delegate.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        body {
+            border: 5px solid goldenrod;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        main {
+            border: 5px solid red;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        article {
+            border: 5px solid green;
+            margin: 25px;
+            padding: 5px;
+        }
+
+        section {
+            border: 5px solid blue;
+            margin: 35px;
+            padding: 5px;
+        }
+
+        ol {
+            border: 5px solid yellow;
+            margin: 45px;
+            padding: 35px;
+        }
+
+        li {
+            border: 5px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <p>This is inside the body</p>
+    <main id="main">
+        <p>This is inside the main</p>
+        <article id="article">
+            <p>This is inside the article</p>
+            <section id="section">
+                <p>This is inside the section</p>
+                <ol id="list">
+                    <p>This is inside the list</p>
+                    <li id="item-1">Lorem, ipsum.</li>
+                    <li id="item-2">Itaque, doloribus.</li>
+                    <li id="item-3">Ab, natus?</li>
+                    <li id="item-4">Sint, inventore.</li>
+                    <li id="item-5">Quas, <b><i>incidunt?</i></b></li>
+                </ol>
+            </section>
+        </article>
+    </main>
+    <script>
+
+        let body = document.getElementById('body');
+        let main = document.getElementById('main');
+        let article = document.getElementById('article');
+        let section = document.getElementById('section');
+        let list = document.getElementById('list');
+        let itemOne = document.getElementById('item-1');
+
+        list.addEventListener('click', function (event) {
+            console.log('*list clicked');
+            console.log(event);
+            console.log('this: ', this); // who is listening 
+            console.log('event.target: ', event.target); // who did it  
+            // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+            event.stopImmediatePropagation(); // Stops the current event from bubbling further
+            // and prevents any remaining listeners for the same event
+            // on the current target from being executed.
+        });
+        list.addEventListener('mouseenter', function (event) {
+            console.log('*list mouseenter');
+            console.log(event);
+            console.log('this: ', this); // who is listening 
+            console.log('event.target: ', event.target); // who did it  
+            // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        });
+        // list.addEventListener('click', function (event) {
+        //     console.log('*list clicked 2');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        // });
+        // list.addEventListener('click', function (event) {
+        //     console.log('*list clicked 3');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        //     // event.stopImmediatePropagation(); // this will stop the event from propagating to the parent elements and also stop any other event listeners on the same element from being called
+        // });
+        // list.addEventListener('click', function (event) {
+        //     console.log('*list clicked 4');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        // });
+        // list.addEventListener('click', function (event) {
+        //     console.log('*list clicked 5');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        // });
+
+        // itemOne.addEventListener('click', function (event) {
+        //     console.log('item ONE clicked');
+        //     console.log(event);
+        //     console.log('WHO IS LISTENING? OR, this: ', this); // who is listening
+        //     console.log('WHO DID IT? OR, event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        // });
+        // section.addEventListener('click', function (event) {
+        //     console.log('section clicked');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+
+        // });
+        // article.addEventListener('click', function (event) {
+        //     console.log('article clicked');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        //     // event.stopPropagation(); // this will stop the event from propagating to the parent elements
+        // });
+        // main.addEventListener('click', function (event) {
+        //     console.log('main clicked');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        // });
+        // body.addEventListener('click', function (event) {
+        //     console.log('body clicked');
+        //     console.log(event);
+        //     console.log('this: ', this); // who is listening
+        //     console.log('event.target: ', event.target); // who did it
+        // });
+    </script>
+</body>
+
+</html>
