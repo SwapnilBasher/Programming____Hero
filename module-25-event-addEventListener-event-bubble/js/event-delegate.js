@@ -31,5 +31,5 @@ document.getElementById('btn').addEventListener('click', function (event) {
     let newItem = document.createElement('li');
     newItem.innerText = 'pineapple in pizza means what ?' + number++;
     document.querySelector('#list-container').appendChild(newItem);
-    newItem.classList.add('item');
+    newItem.classList.add('item');  
 });

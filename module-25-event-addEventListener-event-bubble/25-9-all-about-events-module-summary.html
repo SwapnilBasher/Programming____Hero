@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom Events Summary</h1>
+    <input id="input" type="text" placeholder="Your Name . . . ">
+    <button id="btn">Add Name </button>
+    <br>
+    <br>
+    <button onclick="press()" >click me</button>
+    <div id="container">
+
+    </div>
+    <script>
+        // addeventlistener diye
+        document.getElementById('btn').addEventListener('click',function (event) {
+           let newPara = document.createElement('p');
+           newPara.innerText = document.getElementById('input').value; 
+           document.getElementById('container').appendChild(newPara);
+           document.getElementById('input').value = '';
+        });
+        // onclick attribute diye
+        function press() {
+            console.log('button has been pressed.');
+        }
+    </script>
+</body>
+</html>
