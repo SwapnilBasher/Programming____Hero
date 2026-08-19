@@ -17,3 +17,19 @@ function max(...numbers) {
 
 console.log(max(1, 2, 3, 4, 5)); // Output: 5 - The max function takes any number of arguments and returns the maximum value
 
+let human = {
+    height: "5ft 8inches",
+    age: 30,
+    city: 'New York'
+};
+
+let student = {
+    name: 'John',
+    age: 20,
+    grade: 'A'
+};
+
+let person = { ...human, ...student }; // Merges the properties of human and student into a new object person
+console.log(person); 
+// Output: { height: '5ft 8inches', age: 20, city: 'New York', name: 'John', grade: 'A' }
+// Note that the age property from student overwrites the age property from human
